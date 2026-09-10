@@ -27,6 +27,7 @@
         "symfony/uid": "7.3.*",
         "symfony/validator": "7.3.*",
         "symfony/yaml": "7.3.*",
+        "symfonycasts/reset-password-bundle": "^1.25",
         "symfonycasts/verify-email-bundle": "*"
     },
     "config": {

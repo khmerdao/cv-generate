@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>{{ 'auth.check_email_title'|trans }}</h1>
+<p>{{ 'auth.check_email_body'|trans({'minutes': resetToken.expirationMessageData.minutes ?? 60}) }}</p>
+{% endblock %}

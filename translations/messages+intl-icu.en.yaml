@@ -14,3 +14,16 @@ email.verify.title: Welcome to CVTailor
 email.verify.body: Click the link below to confirm your email address.
 email.verify.cta: Confirm my email
 email.verify.expires: 'This link expires at {time}.'
+auth.send: Send
+auth.forgot_password: Forgot password
+auth.new_password: New password
+auth.repeat_password: Repeat password
+auth.change_password: Change password
+auth.passwords_mismatch: The passwords do not match.
+auth.password_changed: Your password has been changed.
+auth.check_email_title: Check your inbox
+auth.check_email_body: 'If an account matches that address, a reset link valid for {minutes} minutes has just been sent.'
+email.reset.subject: Reset your password
+email.reset.title: Reset your password
+email.reset.cta: Choose a new password
+email.reset.expires: 'This link expires in {minutes} minutes.'

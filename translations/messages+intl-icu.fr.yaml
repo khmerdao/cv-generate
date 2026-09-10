@@ -14,3 +14,16 @@ email.verify.title: Bienvenue sur CVTailor
 email.verify.body: Cliquez sur le lien ci-dessous pour confirmer votre adresse.
 email.verify.cta: Confirmer mon adresse
 email.verify.expires: 'Ce lien expire à {time}.'
+auth.send: Envoyer
+auth.forgot_password: Mot de passe oublié
+auth.new_password: Nouveau mot de passe
+auth.repeat_password: Répéter le mot de passe
+auth.change_password: Modifier le mot de passe
+auth.passwords_mismatch: Les mots de passe ne correspondent pas.
+auth.password_changed: Votre mot de passe a été modifié.
+auth.check_email_title: Vérifiez votre boîte mail
+auth.check_email_body: 'Si un compte existe pour cette adresse, un lien de réinitialisation valable {minutes} minutes vient d''être envoyé.'
+email.reset.subject: Réinitialisation de votre mot de passe
+email.reset.title: Réinitialiser votre mot de passe
+email.reset.cta: Choisir un nouveau mot de passe
+email.reset.expires: 'Ce lien expire dans {minutes} minutes.'
