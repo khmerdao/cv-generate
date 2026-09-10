@@ -8,3 +8,8 @@ controllers:
         _locale: fr|en
     defaults:
         _locale: '%kernel.default_locale%'
+    exclude: '../src/Shared/Controller/LocaleController.php'
+
+locale_controller:
+    resource: ../src/Shared/Controller/LocaleController.php
+    type: attribute

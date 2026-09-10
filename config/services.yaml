@@ -9,6 +9,7 @@ services:
         autoconfigure: true
         bind:
             string $mailerFrom: '%env(MAILER_FROM)%'
+            string $defaultLocale: '%env(DEFAULT_LOCALE)%'
 
     App\:
         resource: '../src/'
