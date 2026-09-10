@@ -1,0 +1,5 @@
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <twig:Alert type="{{ label }}" class="mb-4 flash flash-{{ label }}">{{ message }}</twig:Alert>
+    {% endfor %}
+{% endfor %}

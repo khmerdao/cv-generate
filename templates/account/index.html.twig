@@ -1,0 +1,7 @@
+{% extends 'layout/app.html.twig' %}
+{% block page_title %}{{ 'nav.account'|trans }}{% endblock %}
+{% block content %}
+<twig:Card title="{{ 'nav.account'|trans }}">
+    <p class="text-sm text-ink-muted">{{ app.user.email }}</p>
+</twig:Card>
+{% endblock %}

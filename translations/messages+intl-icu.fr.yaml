@@ -27,3 +27,18 @@ email.reset.subject: Réinitialisation de votre mot de passe
 email.reset.title: Réinitialiser votre mot de passe
 email.reset.cta: Choisir un nouveau mot de passe
 email.reset.expires: 'Ce lien expire dans {minutes} minutes.'
+home.tagline: 'Collez l''URL d''une offre, obtenez un CV adapté aux mots-clés attendus.'
+home.cta: Commencer gratuitement
+hello.greeting: Bonjour
+nav.dashboard: Tableau de bord
+nav.account: Mon compte
+nav.logout: Se déconnecter
+nav.switch_locale: Changer de langue
+dashboard.resumes: Mes CV
+dashboard.resumes_empty: Aucun CV pour le moment.
+dashboard.tailorings: Dernières adaptations
+dashboard.tailorings_empty: Aucune adaptation pour le moment.
+dashboard.quota: Mon forfait
+dashboard.plan: 'Forfait actuel : {plan}'
+auth.verify_banner: Confirmez votre adresse e-mail pour pouvoir générer des CV.
+auth.resend_verification: Renvoyer l'e-mail

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale }}">
+<html lang="{{ app.request.locale }}" class="h-full bg-surface-alt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="turbo-refresh-method" content="morph">
     <title>{% block title %}CVTailor{% endblock %}</title>
     {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
     {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
 </head>
-<body>
-    {% for label, messages in app.flashes %}{% for message in messages %}<div class="flash flash-{{ label }}">{{ message }}</div>{% endfor %}{% endfor %}
-    {% block body %}{% endblock %}
+<body class="min-h-full font-sans text-ink antialiased">
+{% block body %}{% endblock %}
 </body>
 </html>

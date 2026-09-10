@@ -1,0 +1,5 @@
+{% set other = app.request.locale == 'fr' ? 'en' : 'fr' %}
+<form method="post" action="{{ path('app_locale_switch', {new: other}) }}">
+    <input type="hidden" name="_redirect" value="{{ app.request.requestUri }}">
+    <button type="submit" class="text-ink-muted hover:text-ink" aria-label="{{ 'nav.switch_locale'|trans }}">{{ other|upper }}</button>
+</form>

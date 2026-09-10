@@ -1,0 +1,5 @@
+{% if href %}
+<a href="{{ href }}" {{ attributes.defaults({class: this.classes()}) }}>{% block content %}{% endblock %}</a>
+{% else %}
+<button type="{{ type }}" {{ attributes.defaults({class: this.classes()}) }}>{{ block('content') }}</button>
+{% endif %}

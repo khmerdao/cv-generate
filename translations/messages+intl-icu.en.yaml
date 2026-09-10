@@ -27,3 +27,18 @@ email.reset.subject: Reset your password
 email.reset.title: Reset your password
 email.reset.cta: Choose a new password
 email.reset.expires: 'This link expires in {minutes} minutes.'
+home.tagline: 'Paste a job offer URL, get a CV tuned to the keywords it expects.'
+home.cta: Start for free
+hello.greeting: Hello
+nav.dashboard: Dashboard
+nav.account: My account
+nav.logout: Sign out
+nav.switch_locale: Switch language
+dashboard.resumes: My resumes
+dashboard.resumes_empty: No resume yet.
+dashboard.tailorings: Recent tailorings
+dashboard.tailorings_empty: No tailoring yet.
+dashboard.quota: My plan
+dashboard.plan: 'Current plan: {plan}'
+auth.verify_banner: Confirm your email address to start generating CVs.
+auth.resend_verification: Resend the email

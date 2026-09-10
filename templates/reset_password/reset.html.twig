@@ -1,5 +1,11 @@
-{% extends 'base.html.twig' %}
-{% block body %}
-<h1>{{ 'auth.change_password'|trans }}</h1>
-{{ form_start(form) }}{{ form_errors(form) }}{{ form_row(form.plainPassword) }}{{ form_row(form.submit) }}{{ form_end(form) }}
+{% extends 'layout/marketing.html.twig' %}
+{% block content %}
+<twig:Card title="{{ 'auth.change_password'|trans }}" class="mx-auto max-w-md">
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <twig:Input :field="form.plainPassword.first" />
+    <twig:Input :field="form.plainPassword.second" />
+    {{ form_row(form.submit, {label: 'auth.change_password'|trans, attr: {class: 'inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition hover:bg-accent-hover'}}) }}
+    {{ form_end(form) }}
+</twig:Card>
 {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<header class="border-b border-surface-line bg-surface">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <a href="{{ path('app_home') }}" class="text-lg font-semibold">CVTailor</a>
+        <nav class="flex items-center gap-4 text-sm">
+            {% include 'layout/_locale_switch.html.twig' %}
+            {% if app.user %}
+                <twig:Button href="{{ path('app_dashboard') }}">{{ 'nav.dashboard'|trans }}</twig:Button>
+            {% else %}
+                <a href="{{ path('app_login') }}">{{ 'auth.login'|trans }}</a>
+                <twig:Button href="{{ path('app_register') }}">{{ 'auth.register'|trans }}</twig:Button>
+            {% endif %}
+        </nav>
+    </div>
+</header>
+<main class="mx-auto max-w-5xl px-6 py-12">
+    {% include 'layout/_flashes.html.twig' %}
+    {% block content %}{% endblock %}
+</main>
+{% endblock %}

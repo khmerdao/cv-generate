@@ -1,2 +1,8 @@
-{% extends 'base.html.twig' %}
-{% block body %}<h1>{{ 'home.title'|trans }}</h1>{% endblock %}
+{% extends 'layout/marketing.html.twig' %}
+{% block content %}
+<section class="max-w-2xl">
+    <h1 class="text-4xl font-semibold tracking-tight">{{ 'home.title'|trans }}</h1>
+    <p class="mt-4 text-lg text-ink-muted">{{ 'home.tagline'|trans }}</p>
+    <div class="mt-8"><twig:Button href="{{ path('app_register') }}">{{ 'home.cta'|trans }}</twig:Button></div>
+</section>
+{% endblock %}
