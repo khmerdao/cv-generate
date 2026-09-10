@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}CVTailor{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-    {% block javascripts %}{% endblock %}
+    {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+    {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
 </head>
 <body>
     {% for label, messages in app.flashes %}{% for message in messages %}<div class="flash flash-{{ label }}">{{ message }}</div>{% endfor %}{% endfor %}

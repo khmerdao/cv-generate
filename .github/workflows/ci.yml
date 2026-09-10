@@ -25,7 +25,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      # node 22 ships npm 10.9.x, whose arborist crashes on the symfony/ux file: deps.
+      - run: npm install -g npm@11
       - run: npm ci
-      - run: npx eslint assets --ext .ts,.tsx
-      - run: npx vitest run
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test
       - run: npm run build
