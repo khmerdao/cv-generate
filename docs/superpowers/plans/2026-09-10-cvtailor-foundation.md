@@ -2899,7 +2899,7 @@ use Symfony\Component\Routing\Attribute\Route;
 final class LocaleController extends AbstractController
 {
     /** Never reached: LocaleSubscriber redirects first. Exists so the router does not 404 unprefixed paths. */
-    #[Route('/{path}', name: 'app_locale_fallback', requirements: ['path' => '(?!fr/|en/|fr$|en$|_|webhooks/).*'], defaults: ['_locale' => 'fr'], priority: -100)]
+    #[Route('/{path}', name: 'app_locale_fallback', requirements: ['path' => '(?!fr/|en/|fr$|en$|_|webhooks/).*'], defaults: ['_locale' => 'fr', 'path' => ''], priority: -100)]
     public function fallback(): Response
     {
         throw $this->createNotFoundException();
