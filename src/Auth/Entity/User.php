@@ -45,7 +45,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private \DateTimeImmutable $createdAt;
 
     #[ORM\OneToOne(mappedBy: 'user', targetEntity: Subscription::class, cascade: ['persist', 'remove'])]
-    private Subscription $subscription;
+    private ?Subscription $subscription = null;
 
     /** @var Collection<int, Resume> */
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Resume::class)]
@@ -81,8 +81,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = $email;
     }
 
+    /** @return non-empty-string */
     public function getUserIdentifier(): string
     {
+        \assert('' !== $this->email);
+
         return $this->email;
     }
 
@@ -113,6 +116,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getSubscription(): Subscription
     {
+        \assert($this->subscription instanceof Subscription);
+
         return $this->subscription;
     }
 
