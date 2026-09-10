@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>{{ 'auth.login'|trans }}</h1>
+{% if error %}<p class="form-error">{{ error.messageKey|trans(error.messageData, 'security') }}</p>{% endif %}
+<form method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    <label>{{ 'auth.email'|trans }} <input type="email" name="_username" value="{{ last_username }}" required autofocus></label>
+    <label>{{ 'auth.password'|trans }} <input type="password" name="_password" required></label>
+    <label><input type="checkbox" name="_remember_me"> {{ 'auth.remember_me'|trans }}</label>
+    <button type="submit">{{ 'auth.login'|trans }}</button>
+</form>
+<a href="{{ path('app_register') }}">{{ 'auth.register'|trans }}</a>
+{% endblock %}

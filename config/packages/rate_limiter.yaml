@@ -1,0 +1,11 @@
+framework:
+    rate_limiter:
+        # login is handled by security.firewalls.main.login_throttling (IP + username).
+        register:
+            policy: sliding_window
+            limit: 10
+            interval: '1 hour'
+        reset_password:
+            policy: sliding_window
+            limit: 3
+            interval: '1 hour'

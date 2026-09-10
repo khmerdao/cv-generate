@@ -1,0 +1,9 @@
+home.title: Welcome to CVTailor
+dashboard.title: Dashboard
+auth.email: Email address
+auth.password: Password
+auth.login: Sign in
+auth.register: Create an account
+auth.remember_me: Remember me
+auth.too_many_attempts: Too many attempts, try again later.
+auth.email_taken: This email is already in use.

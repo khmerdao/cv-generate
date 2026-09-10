@@ -20,8 +20,8 @@ final class SmokeTest extends WebTestCase
     /** @return iterable<array{string}> */
     public static function publicUrls(): iterable
     {
-        yield ['/fr'];
-        yield ['/en'];
+        yield ['/fr/'];
+        yield ['/en/'];
         yield ['/fr/login'];
         yield ['/fr/register'];
         yield ['/fr/reset-password'];
