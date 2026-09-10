@@ -42,3 +42,13 @@ dashboard.quota: My plan
 dashboard.plan: 'Current plan: {plan}'
 auth.verify_banner: Confirm your email address to start generating CVs.
 auth.resend_verification: Resend the email
+account.profile: Profile
+account.locale: Language
+account.danger_zone: Danger zone
+account.delete_help: Deleting your account permanently erases your resumes and tailorings.
+account.delete_word: DELETE
+account.delete_confirmation_label: 'Type {word} to confirm'
+account.delete_confirmation_mismatch: The confirmation word is incorrect.
+account.delete: Delete my account
+account.delete_confirm_js: This action cannot be undone. Continue?
+account.deleted: Your account has been deleted.

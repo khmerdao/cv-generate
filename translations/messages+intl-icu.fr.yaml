@@ -42,3 +42,13 @@ dashboard.quota: Mon forfait
 dashboard.plan: 'Forfait actuel : {plan}'
 auth.verify_banner: Confirmez votre adresse e-mail pour pouvoir générer des CV.
 auth.resend_verification: Renvoyer l'e-mail
+account.profile: Profil
+account.locale: Langue
+account.danger_zone: Zone dangereuse
+account.delete_help: La suppression efface définitivement vos CV et vos adaptations.
+account.delete_word: SUPPRIMER
+account.delete_confirmation_label: 'Tapez {word} pour confirmer'
+account.delete_confirmation_mismatch: Le mot de confirmation est incorrect.
+account.delete: Supprimer mon compte
+account.delete_confirm_js: Cette action est irréversible. Continuer ?
+account.deleted: Votre compte a été supprimé.

@@ -1,7 +1,29 @@
 {% extends 'layout/app.html.twig' %}
 {% block page_title %}{{ 'nav.account'|trans }}{% endblock %}
 {% block content %}
-<twig:Card title="{{ 'nav.account'|trans }}">
-    <p class="text-sm text-ink-muted">{{ app.user.email }}</p>
-</twig:Card>
+<div class="grid max-w-3xl gap-6">
+    <twig:Card title="{{ 'account.profile'|trans }}">
+        <p class="text-sm">{{ user.email }}</p>
+        <p class="mt-1 text-sm text-ink-muted">{{ 'account.locale'|trans }} : {{ user.locale|upper }}</p>
+        <p class="mt-1 text-sm text-ink-muted">{{ 'dashboard.plan'|trans({'plan': user.subscription.plan.value}) }}</p>
+    </twig:Card>
+
+    <twig:Card title="{{ 'auth.change_password'|trans }}">
+        {{ form_start(passwordForm) }}
+        {{ form_errors(passwordForm) }}
+        <twig:Input :field="passwordForm.plainPassword.first" />
+        <twig:Input :field="passwordForm.plainPassword.second" />
+        {{ form_row(passwordForm.submit, {label: 'auth.change_password'|trans}) }}
+        {{ form_end(passwordForm) }}
+    </twig:Card>
+
+    <twig:Card title="{{ 'account.danger_zone'|trans }}">
+        <p class="mb-4 text-sm text-ink-muted">{{ 'account.delete_help'|trans }}</p>
+        {{ form_start(deleteForm, {attr: {'data-controller': 'confirm', 'data-action': 'submit->confirm#ask', 'data-confirm-message-value': 'account.delete_confirm_js'|trans}}) }}
+        {{ form_errors(deleteForm) }}
+        <twig:Input :field="deleteForm.confirmation" />
+        {{ form_row(deleteForm.submit, {label: 'account.delete'|trans}) }}
+        {{ form_end(deleteForm) }}
+    </twig:Card>
+</div>
 {% endblock %}
