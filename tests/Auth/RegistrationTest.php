@@ -25,7 +25,8 @@ final class RegistrationTest extends AuthenticatedWebTestCase
         self::assertInstanceOf(User::class, $user);
         self::assertFalse($user->isVerified());
         self::assertSame('fr', $user->getLocale());
-        self::assertEmailCount(1);
+        // The verification mail is routed to the async transport (see messenger.yaml).
+        self::assertQueuedEmailCount(1);
     }
 
     public function testRegistrationRejectsShortPasswordAndDuplicateEmail(): void

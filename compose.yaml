@@ -17,15 +17,7 @@ services:
 
   worker:
     build: { context: ., dockerfile: docker/php/Dockerfile, target: dev }
-    # messenger is wired in Task 13; until then the worker waits instead of crash-looping.
-    command:
-      - sh
-      - -c
-      - >
-        until php bin/console list messenger >/dev/null 2>&1; do
-          echo "worker: waiting for symfony/messenger (Task 13)"; sleep 15;
-        done;
-        exec php bin/console messenger:consume async --time-limit=3600 -vv
+    command: ["php", "bin/console", "messenger:consume", "async", "--time-limit=3600", "-vv"]
     volumes: [ ".:/app" ]
     depends_on: [ php ]
     environment: *php-env
