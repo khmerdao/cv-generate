@@ -1,0 +1,15 @@
+{% extends 'layout/app.html.twig' %}
+{% block page_title %}Mercure check{% endblock %}
+{% block content %}
+<twig:Card>
+    <div data-controller="mercure-check"
+         data-mercure-check-hub-value="{{ hubUrl }}"
+         data-mercure-check-topic-value="{{ topic }}"
+         data-mercure-check-publish-url-value="{{ path('app_mercure_check_publish') }}"
+         data-mercure-check-csrf-value="{{ csrf_token('mercure-check') }}">
+        <p>Topic: <code>{{ topic }}</code></p>
+        <button type="button" data-action="mercure-check#publish" class="mt-2 text-accent">Publish a test message</button>
+        <ul data-mercure-check-target="log" class="mt-4 text-sm"></ul>
+    </div>
+</twig:Card>
+{% endblock %}
