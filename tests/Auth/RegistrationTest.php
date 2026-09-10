@@ -6,11 +6,9 @@ namespace App\Tests\Auth;
 
 use App\Auth\Entity\User;
 use App\Tests\Support\AuthenticatedWebTestCase;
-use PHPUnit\Framework\Attributes\Group;
 
 final class RegistrationTest extends AuthenticatedWebTestCase
 {
-    #[Group('needs-task-6')]
     public function testUserCanRegisterAndIsLoggedIn(): void
     {
         $client = static::createClient();

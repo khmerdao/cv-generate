@@ -7,3 +7,10 @@ auth.register: Create an account
 auth.remember_me: Remember me
 auth.too_many_attempts: Too many attempts, try again later.
 auth.email_taken: This email is already in use.
+auth.email_verified: Your email address is verified.
+auth.verification_sent: A new verification email has just been sent.
+email.verify.subject: Confirm your email address
+email.verify.title: Welcome to CVTailor
+email.verify.body: Click the link below to confirm your email address.
+email.verify.cta: Confirm my email
+email.verify.expires: 'This link expires at {time}.'

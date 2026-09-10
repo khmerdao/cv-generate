@@ -1,0 +1,4 @@
+<h1>{{ 'email.verify.title'|trans }}</h1>
+<p>{{ 'email.verify.body'|trans }}</p>
+<p><a href="{{ signedUrl|raw }}">{{ 'email.verify.cta'|trans }}</a></p>
+<p>{{ 'email.verify.expires'|trans({'time': expiresAt|date('H:i')}) }}</p>
