@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env: { MYSQL_ROOT_PASSWORD: root, MYSQL_DATABASE: app_test }
+        ports: [ "3306:3306" ]
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=5
+    env:
+      DATABASE_URL: "mysql://root:root@127.0.0.1:3306/app_test?serverVersion=8.0&charset=utf8mb4"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with: { php-version: "8.4", extensions: "intl, pdo_mysql, redis, gd, zip" }
+      - run: composer install --no-interaction --prefer-dist
+      - run: vendor/bin/php-cs-fixer fix --dry-run --diff
+      - run: php bin/console cache:warmup --env=dev && vendor/bin/phpstan analyse
+      - run: php bin/phpunit
+  js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci
+      - run: npx eslint assets --ext .ts,.tsx
+      - run: npx vitest run
+      - run: npm run build
