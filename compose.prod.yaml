@@ -1,0 +1,7 @@
+services:
+  php:
+    build: { target: prod }
+    volumes: []
+  worker:
+    build: { target: prod }
+    volumes: []

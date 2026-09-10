@@ -1,0 +1,12 @@
+# Normalise all text files to LF: the containers bind-mount the working tree
+# directly, and CRLF would break shell scripts, the Makefile and config files.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
