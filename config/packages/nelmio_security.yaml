@@ -1,0 +1,30 @@
+nelmio_security:
+    clickjacking:
+        paths: { '^/.*': DENY }
+    content_type: { nosniff: true }
+    referrer_policy: { enabled: true, policies: [ 'strict-origin-when-cross-origin' ] }
+    csp:
+        enabled: true
+        hosts: []
+        content_types: []
+        enforce:
+            default-src: [ 'self' ]
+            script-src: [ 'self' ]
+            style-src: [ 'self', 'unsafe-inline' ]
+            img-src: [ 'self', 'data:' ]
+            font-src: [ 'self', 'data:' ]
+            connect-src: [ 'self', '%env(MERCURE_PUBLIC_URL)%' ]
+            frame-ancestors: [ 'none' ]
+            block-all-mixed-content: true
+
+when@dev:
+    nelmio_security:
+        csp:
+            enforce:
+                script-src: [ 'self', 'unsafe-inline', 'unsafe-eval' ]
+
+when@prod:
+    nelmio_security:
+        forced_ssl:
+            hsts_max_age: 31536000
+            hsts_subdomains: true
