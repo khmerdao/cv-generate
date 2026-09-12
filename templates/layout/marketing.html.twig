@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<header class="border-b border-surface-line bg-surface">
+<header class="bg-surface-section">
     <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="{{ path('app_home') }}" class="text-lg font-semibold">CVTailor</a>
+        <a href="{{ path('app_home') }}" class="font-display text-lg font-bold text-ink">CVTailor</a>
         <nav class="flex items-center gap-4 text-sm">
             {% include 'layout/_locale_switch.html.twig' %}
             {% if app.user %}

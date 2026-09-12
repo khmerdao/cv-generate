@@ -7,12 +7,12 @@
         <label class="block text-sm">
             <span class="mb-1 block font-medium text-ink">{{ 'auth.email'|trans }}</span>
             <input type="email" name="_username" value="{{ last_username }}" required autofocus
-                   class="block w-full rounded-md border border-surface-line px-3 py-2 text-sm focus:border-accent focus:ring-2 focus:ring-accent/30">
+                   class="block w-full rounded-xl border border-surface-line px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30">
         </label>
         <label class="block text-sm">
             <span class="mb-1 block font-medium text-ink">{{ 'auth.password'|trans }}</span>
             <input type="password" name="_password" required
-                   class="block w-full rounded-md border border-surface-line px-3 py-2 text-sm focus:border-accent focus:ring-2 focus:ring-accent/30">
+                   class="block w-full rounded-xl border border-surface-line px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30">
         </label>
         <label class="flex items-center gap-2 text-sm text-ink-muted">
             <input type="checkbox" name="_remember_me"> {{ 'auth.remember_me'|trans }}

@@ -5,7 +5,7 @@
     {{ form_errors(form) }}
     <twig:Input :field="form.email" />
     <twig:Input :field="form.plainPassword" />
-    {{ form_row(form.submit, {label: 'auth.register'|trans, attr: {class: 'inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition hover:bg-accent-hover'}}) }}
+    {{ form_row(form.submit, {label: 'auth.register'|trans, attr: {class: 'inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink/90'}}) }}
     {{ form_end(form) }}
 </twig:Card>
 {% endblock %}

@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <div class="flex min-h-screen">
-    <aside class="w-60 shrink-0 border-r border-surface-line bg-surface px-4 py-6">
-        <a href="{{ path('app_dashboard') }}" class="block text-lg font-semibold">CVTailor</a>
-        <nav class="mt-8 flex flex-col gap-1 text-sm">
-            <a class="rounded-md px-3 py-2 hover:bg-surface-alt" href="{{ path('app_dashboard') }}">{{ 'nav.dashboard'|trans }}</a>
-            <a class="rounded-md px-3 py-2 hover:bg-surface-alt" href="{{ path('app_account') }}">{{ 'nav.account'|trans }}</a>
+    <aside class="w-60 shrink-0 bg-surface-section px-4 py-6">
+        <a href="{{ path('app_dashboard') }}" class="block font-display text-lg font-bold text-ink">CVTailor</a>
+        <nav class="mt-8 flex flex-col gap-1 text-sm font-medium">
+            <a class="rounded-full px-3 py-2 hover:bg-surface" href="{{ path('app_dashboard') }}">{{ 'nav.dashboard'|trans }}</a>
+            <a class="rounded-full px-3 py-2 hover:bg-surface" href="{{ path('app_account') }}">{{ 'nav.account'|trans }}</a>
         </nav>
     </aside>
     <div class="flex flex-1 flex-col">
         <header class="flex items-center justify-between border-b border-surface-line bg-surface px-8 py-4">
-            <h1 class="text-xl font-semibold">{% block page_title %}{% endblock %}</h1>
+            <h1 class="font-display text-xl font-bold text-ink">{% block page_title %}{% endblock %}</h1>
             <div class="flex items-center gap-4 text-sm">
                 {% include 'layout/_locale_switch.html.twig' %}
                 <div data-controller="dropdown" class="relative">

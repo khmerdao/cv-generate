@@ -13,10 +13,10 @@ final class Alert
 
     public function classes(): string
     {
-        return 'rounded-md px-4 py-3 text-sm '.match ($this->type) {
-            'success' => 'bg-green-50 text-green-800',
+        return 'rounded-2xl px-4 py-3 text-sm '.match ($this->type) {
+            'success' => 'bg-pastel-mint text-ink',
             'error' => 'bg-red-50 text-red-800',
-            default => 'bg-accent-soft text-ink',
+            default => 'bg-pastel-violet text-ink',
         };
     }
 }

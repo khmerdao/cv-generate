@@ -1,4 +1,4 @@
-<section {{ attributes.defaults({class: 'rounded-lg border border-surface-line bg-surface p-6 shadow-sm'}) }}>
-    {% if title %}<h2 class="mb-4 text-base font-semibold text-ink">{{ title }}</h2>{% endif %}
+<section {{ attributes.defaults({class: this.classes()}) }}>
+    {% if title %}<h2 class="mb-4 font-display text-base font-semibold">{{ title }}</h2>{% endif %}
     {% block content %}{% endblock %}
 </section>

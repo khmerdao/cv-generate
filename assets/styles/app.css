@@ -1,18 +1,23 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/poppins/800.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    ::selection {
+        background-color: theme('colors.pastel.pink');
+        color: theme('colors.ink.DEFAULT');
+    }
+}
+
 @layer components {
     .form-error {
         @apply mt-1 text-sm text-red-600 list-disc pl-5;
-    }
-    .flash {
-        @apply rounded-md px-4 py-3 text-sm mb-4;
-    }
-    .flash-success {
-        @apply bg-green-50 text-green-800;
-    }
-    .flash-error {
-        @apply bg-red-50 text-red-800;
     }
 }

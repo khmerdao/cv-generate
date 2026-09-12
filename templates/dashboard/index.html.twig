@@ -2,9 +2,9 @@
 {% block page_title %}{{ 'dashboard.title'|trans }}{% endblock %}
 {% block content %}
 <div class="grid gap-6 md:grid-cols-2">
-    <twig:Card title="{{ 'dashboard.resumes'|trans }}"><p class="text-sm text-ink-muted">{{ 'dashboard.resumes_empty'|trans }}</p></twig:Card>
-    <twig:Card title="{{ 'dashboard.tailorings'|trans }}"><p class="text-sm text-ink-muted">{{ 'dashboard.tailorings_empty'|trans }}</p></twig:Card>
-    <twig:Card title="{{ 'dashboard.quota'|trans }}"><p class="text-sm">{{ 'dashboard.plan'|trans({'plan': app.user.subscription.plan.value}) }}</p></twig:Card>
+    <twig:Card variant="violet" title="{{ 'dashboard.resumes'|trans }}"><p class="text-sm">{{ 'dashboard.resumes_empty'|trans }}</p></twig:Card>
+    <twig:Card variant="mint" title="{{ 'dashboard.tailorings'|trans }}"><p class="text-sm">{{ 'dashboard.tailorings_empty'|trans }}</p></twig:Card>
+    <twig:Card variant="yellow" title="{{ 'dashboard.quota'|trans }}"><p class="text-sm">{{ 'dashboard.plan'|trans({'plan': app.user.subscription.plan.value}) }}</p></twig:Card>
     <twig:Card title="React">{{ react_component('HelloIsland', {name: app.user.email, greeting: 'hello.greeting'|trans}) }}</twig:Card>
 </div>
 {% endblock %}

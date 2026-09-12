@@ -3,6 +3,8 @@
     "private": true,
     "devDependencies": {
         "@babel/core": "^8.0.0",
+        "@fontsource/inter": "^5.1",
+        "@fontsource/poppins": "^5.1",
         "@babel/preset-env": "^8.0.0",
         "@babel/preset-react": "^8.0.0",
         "@hotwired/stimulus": "^3.0.0",
